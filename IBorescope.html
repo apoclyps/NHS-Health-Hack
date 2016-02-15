@@ -1,0 +1,98 @@
+ <!--
+Design by Bryant Smith
+http://www.bryantsmith.com
+http://www.aszx.net
+email: template [-at-] bryantsmith [-dot-] com
+Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
+
+Name       : HD Monochrome
+Description: One column, with top naviation.  All divs, validations: XHTML Strict 1.0 & CSS
+Version    : 1.0
+Released   : 20081009
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>IBorescope Health Hack</title>
+</head>
+
+<body>
+    <div id="page">
+        <div class="topNaviagationLink"><a href="index.html">Home</a></div>
+		<div class="topNaviagationLink"><a href="Project.html">Project Report</a></div>
+        <div class="topNaviagationLink"><a href="IBorescope.html">IBorescope</a></div>
+	</div>
+    <div id="mainPictureLoading">
+    	<div class="picture">
+        	<img src="http://KYLE-APOCLYPS-L:8080/cam_1.cgi" class="webcam" id="webcam1" onmousedown="PTZMouseDown1(event)" width="650" height="325" />
+<script type="text/javascript">
+<!--
+currentCamera1= 1;
+function PTZMouseDown1(e)
+{
+        var IE = document.all?true:false;
+        var x,y;
+        var myx,myy;
+        var myifr = document.getElementById("_iframe-ptz");
+        tp = getElPos1();
+        myx = tp[0];
+        myy = tp[1];
+        if(IE){
+        x = event.clientX - myx + document.body.scrollLeft;
+        y = event.clientY - myy + document.body.scrollTop;
+        } else {
+        x = e.pageX - myx;
+        y = e.pageY - myy;
+        }
+        //alert(x + " :: " + y);
+        if (width_array[currentCamera1] > 0) x = Math.round((x * 400) / width_array[currentCamera1]);
+        if (height_array[currentCamera1] > 0) y = Math.round((y * 300) / height_array[currentCamera1]);
+        //alert(x + " :: " + y);
+        if (myifr != null) myifr.src = "http://KYLE-APOCLYPS-L:8080/ptz?src=" + currentCamera1 + "&moveto_x=" + x + "&moveto_y=" + y +"";
+        return true;
+}
+function getElPos1()
+{
+            el = document.images.webcam1;
+            x = el.offsetLeft;
+            y = el.offsetTop;
+            elp = el.offsetParent;
+            while(elp!=null)
+              { x+=elp.offsetLeft;
+                y+=elp.offsetTop;
+                elp=elp.offsetParent;
+              }
+            return new Array(x,y);
+}
+//-->
+</script>
+        </div>
+    </div>
+        <div class="contentBox">
+    	<div class="innerBox">
+        	<h1>IBorescope Live View</h1>
+          <div class="contentText">
+            <p>This is a live stream broadcast from the IBorescope device across a Wi-Fi network that is accessed via a Application called Webcam7</p><br />
+        <p> The website connects directly to the local server and display's the stream across HTTP and can be accessed by any browser. Currently this is limited to a local machine however this could easily be changed if the website was hosted on a server making it accessible to the Internet. </p><br />
+		<p>On a live system, login and authenticaion would be required due to the nature of what the device would be used for and patient confidentiality. Given additional time this would easily be accomplished as the most difficult portion of the project was gaining access to the video steam from the device and doing it securely.  </p><br />
+		
+		<blockquote><p>"Discovery consists of seeing what everybody has seen and thinking what nobody has thought"</p></blockquote>
+                </div>
+
+       
+        
+<!-- Please leave this in place after all of your content - thanks :) -->
+<h4><a href="http://www.aszx.net">Project</a> by <a href="http://www.kyleharrison.co.uk">Kyle Harrison & Peter Stevenson	</a>  <br><BR>
+<a href="http://www.aszx.net">Web Design Template</a> by <a href="http://www.bryantsmith.com">Bryant Smith</a>  </h4>
+<!-- Please leave this in place after all of your content - thanks :) -->
+    </div>
+</div>
+        
+</body>
+</html>
+
+
